@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Errors.fs" />
+    <Compile Include="Events.fs" />
+    <Compile Include="ComplianceRequirement.fs" />
+    <Compile Include="RegulatoryFiling.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyAsCode.SharedKernel\CompanyAsCode.SharedKernel.fsproj" />
+    <ProjectReference Include="..\CompanyAsCode.Legal\CompanyAsCode.Legal.fsproj" />
+  </ItemGroup>
+
+</Project>

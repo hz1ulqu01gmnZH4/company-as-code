@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.HR</name></assembly>
+<members>
+<member name="T:CompanyAsCode.HR.Employment.SalaryStructure">
+<summary>
+ Salary structure
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.AllowanceType">
+<summary>
+ Allowance types
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.PaymentFrequency">
+<summary>
+ Salary payment frequency
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.LeaveBalance">
+<summary>
+ Leave balance
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.LeaveType">
+<summary>
+ Leave type
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.EmploymentContract">
+<summary>
+ Employment contract
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.ProbationPeriod">
+<summary>
+ Probation period
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.ContractDuration">
+<summary>
+ Contract duration
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.WorkingHours">
+<summary>
+ Working hours configuration
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment.EmploymentType">
+<summary>
+ Employment type classification
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employment.calculateAnnualLeave(System.Int32,System.Decimal)">
+<summary>
+ Annual paid leave calculation based on tenure
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Employment.maxOvertimeYearly">
+<summary>
+ Maximum overtime hours per year
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Employment.maxOvertimeMonthly">
+<summary>
+ Maximum overtime hours per month (general limit)
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Employment.standardWeeklyHours">
+<summary>
+ Standard working hours per week
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Employment.standardDailyHours">
+<summary>
+ Standard working hours per day
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employment">
+<summary>
+ Employment types and contracts for Japanese labor law
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.UpdateSalary(CompanyAsCode.HR.Employment.SalaryStructure)">
+<summary>
+ Update salary
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.UpdateContact(CompanyAsCode.SharedKernel.Contact.ContactInfo)">
+<summary>
+ Update contact info
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.UpdateBankAccount(CompanyAsCode.SharedKernel.Financial.BankAccount)">
+<summary>
+ Update bank account
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.TransferToDepartment(CompanyAsCode.SharedKernel.Identity.DepartmentId)">
+<summary>
+ Transfer to department
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.Terminate(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Terminate employment
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.StartLeaveOfAbsence">
+<summary>
+ Start leave of absence
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.ReturnFromLeave">
+<summary>
+ Return from leave of absence
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.Retire(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Retire
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.Resign(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Resign
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.RequestLeave(CompanyAsCode.HR.Employment.LeaveType,System.Decimal)">
+<summary>
+ Request leave
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.RenewAnnualLeave(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Renew annual leave (typically at fiscal year start)
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.GetLeaveBalance(CompanyAsCode.HR.Employment.LeaveType)">
+<summary>
+ Get leave balance
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.FromState(CompanyAsCode.HR.Employee.EmployeeState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.SharedKernel.Identity.EmployeeNumber,CompanyAsCode.SharedKernel.Contact.PersonName,CompanyAsCode.HR.Employment.EmploymentContract,CompanyAsCode.HR.Employment.SalaryStructure,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create new employee
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.CompleteProbation">
+<summary>
+ Complete probation period
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.Employee.AssignManager(CompanyAsCode.SharedKernel.Identity.EmployeeId)">
+<summary>
+ Assign manager
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employee.Employee">
+<summary>
+ Employee aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employee.EmployeeState">
+<summary>
+ Employee state
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employee.EmployeeStatus">
+<summary>
+ Employee status
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.EmployeeLogic.needsContractRenewal(CompanyAsCode.HR.Employee.Employee,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Check if contract renewal is needed
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.EmployeeLogic.calculateSeverancePay(CompanyAsCode.SharedKernel.Financial.Money,System.Int32)">
+<summary>
+ Calculate severance pay (simple formula)
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Employee.EmployeeLogic.isDueForRetirement(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Check if employee is due for retirement
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Employee.EmployeeLogic.standardRetirementAge">
+<summary>
+ Standard retirement age in Japan
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Employee">
+<summary>
+ Employee aggregate
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.YearEndAdjustment">
+<summary>
+ Year-end adjustment calculation
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.PayrollParams">
+<summary>
+ Payroll calculation parameters
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.Payslip">
+<summary>
+ Payslip for a pay period
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.EarningsComponent">
+<summary>
+ Earnings component
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.Deduction">
+<summary>
+ Deduction record
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.DeductionType">
+<summary>
+ Deduction types
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.SocialInsuranceRates">
+<summary>
+ Social insurance rates (approximate, varies by prefecture and industry)
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.SocialInsuranceType">
+<summary>
+ Social insurance type
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll.TaxBracket">
+<summary>
+ Japanese progressive income tax brackets (2024)
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.calculateSocialInsurance(System.Decimal,System.Int32,CompanyAsCode.HR.Payroll.SocialInsuranceRates)">
+<summary>
+ Calculate social insurance premium
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Payroll.reconstructionTaxRate">
+<summary>
+ Reconstruction tax rate (復興特別所得税)
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.Payroll.incomeTaxBrackets">
+<summary>
+ Income tax brackets for Japan
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.YearEndAdjustmentModule.calculate(CompanyAsCode.SharedKernel.Identity.EmployeeId,System.Int32,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.HR.Payroll.Payslip},Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,CompanyAsCode.SharedKernel.Financial.Money}})">
+<summary>
+ Calculate year-end adjustment
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.PayrollCalculation.generatePayslip(CompanyAsCode.HR.Employee.Employee,CompanyAsCode.SharedKernel.Temporal.DateRange,CompanyAsCode.SharedKernel.Temporal.Date,System.Decimal,CompanyAsCode.HR.Payroll.PayrollParams)">
+<summary>
+ Generate payslip
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.PayrollCalculation.calculateHourlyRate(System.Decimal,System.Decimal)">
+<summary>
+ Calculate hourly rate from monthly salary
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.PayrollCalculation.calculateOvertimePay(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+<summary>
+ Calculate overtime pay
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.Payroll.PayrollCalculation.calculateMonthlyWithholding(System.Decimal,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.HR.Payroll.TaxBracket})">
+<summary>
+ Calculate monthly income tax withholding (simplified)
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.Payroll">
+<summary>
+ Payroll calculations for Japanese tax and social insurance
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.ChildcareLeaveBenefit">
+<summary>
+ Childcare leave benefit
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.MaternityBenefit">
+<summary>
+ Maternity leave benefit
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.MonthlyChangeReport">
+<summary>
+ Significant change in remuneration (月額変更届)
+ Required when salary changes by 2+ grades for 3 consecutive months
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.StandardRemunerationDetermination">
+<summary>
+ Standard remuneration determination (算定基礎届)
+ Submitted annually in July, determines premiums for September-August
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.InsurancePremium">
+<summary>
+ Insurance premium breakdown
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.EmployeeInsuranceCoverage">
+<summary>
+ Employee insurance coverage
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.InsuranceEnrollment">
+<summary>
+ Insurance enrollment record
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.EnrollmentStatus">
+<summary>
+ Insurance enrollment status
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemuneration">
+<summary>
+ Standard monthly remuneration grade
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.PensionSystem">
+<summary>
+ Pension system type
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance.HealthInsuranceSystem">
+<summary>
+ Health insurance system type
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.ChildcareLeaveBenefitModule.calculate(CompanyAsCode.SharedKernel.Identity.EmployeeId,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemuneration)">
+<summary>
+ Calculate childcare leave benefit
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.MonthlyChangeReportModule.isChangeRequired(CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemuneration,CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Check if change report is required
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.StandardRemunerationDeterminationModule.calculate(CompanyAsCode.SharedKernel.Identity.EmployeeId,System.Int32,CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Calculate annual determination
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.InsurancePremiumModule.calculate(CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemuneration,System.Int32,CompanyAsCode.HR.Payroll.SocialInsuranceRates)">
+<summary>
+ Calculate monthly premiums (simplified)
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.EmployeeInsuranceCoverageModule.isFullyEnrolled(CompanyAsCode.HR.SocialInsurance.EmployeeInsuranceCoverage)">
+<summary>
+ Check if all required insurance is enrolled
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.EmployeeInsuranceCoverageModule.createEnrolled(CompanyAsCode.SharedKernel.Identity.EmployeeId,CompanyAsCode.SharedKernel.Temporal.Date,System.Decimal)">
+<summary>
+ Create default enrollment (all enrolled)
+</summary>
+</member>
+<member name="M:CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemunerationModule.fromActualRemuneration(System.Decimal)">
+<summary>
+ Determine grade from actual monthly remuneration
+</summary>
+</member>
+<member name="P:CompanyAsCode.HR.SocialInsurance.StandardMonthlyRemunerationModule.healthInsuranceGrades">
+<summary>
+ Health insurance grades (1-50)
+</summary>
+</member>
+<member name="T:CompanyAsCode.HR.SocialInsurance">
+<summary>
+ Social insurance management for Japanese companies
+</summary>
+</member>
+</members>
+</doc>

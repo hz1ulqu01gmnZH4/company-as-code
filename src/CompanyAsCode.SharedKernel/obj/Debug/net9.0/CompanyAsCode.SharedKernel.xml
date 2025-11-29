@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.SharedKernel</name></assembly>
+<members>
+<member name="M:CompanyAsCode.SharedKernel.Operators.op_GreaterEqualsGreater``4(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpResult{``1,``2}},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpResult{``3,``2}},``0)">
+<summary>
+ Kleisli composition (compose two Result-returning functions)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Operators.op_LessMultiplyGreater``3(Microsoft.FSharp.Core.FSharpResult{Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2},Microsoft.FSharp.Core.FSharpResult{``0,``2})">
+<summary>
+ Infix apply operator for Result
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Operators.op_LessBangGreater``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpResult{``0,``2})">
+<summary>
+ Infix map operator for Result
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Operators.op_GreaterGreaterEquals``3(Microsoft.FSharp.Core.FSharpResult{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpResult{``2,``1}})">
+<summary>
+ Infix bind operator for Result
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Operators">
+<summary>
+ Operators for Result and Validation
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Validation.Validation`2">
+<summary>
+ Validation type that accumulates errors
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.toResult``2(Microsoft.FSharp.Core.FSharpResult{``0,Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+ Convert Validation to single-error Result (takes first error)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.ofResult``2(Microsoft.FSharp.Core.FSharpResult{``0,``1})">
+<summary>
+ Convert single-error Result to Validation
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.combine``3(Microsoft.FSharp.Core.FSharpResult{``0,Microsoft.FSharp.Collections.FSharpList{``1}},Microsoft.FSharp.Core.FSharpResult{``2,Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+ Combine two validations, accumulating errors
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.map``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpResult{``0,Microsoft.FSharp.Collections.FSharpList{``2}})">
+<summary>
+ Map over validation
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.apply``3(Microsoft.FSharp.Core.FSharpResult{Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Collections.FSharpList{``2}},Microsoft.FSharp.Core.FSharpResult{``0,Microsoft.FSharp.Collections.FSharpList{``2}})">
+<summary>
+ Apply a function wrapped in Validation to a value wrapped in Validation
+ Accumulates errors from both sides
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.failure``2(``0)">
+<summary>
+ Create a failure validation
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Validation.success``2(``0)">
+<summary>
+ Create a success validation
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Validation">
+<summary>
+ Validation result that accumulates errors
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.tapError``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpResult{``1,``0})">
+<summary>
+ Tap into an error result for side effects
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.tap``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpResult{``0,``1})">
+<summary>
+ Tap into a successful result for side effects
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.ensure``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1,``0)">
+<summary>
+ Ensure a condition on the value, or return error
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.require``1(System.Boolean,``0)">
+<summary>
+ Require a condition to be true, or return error
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.toOption``2(Microsoft.FSharp.Core.FSharpResult{``0,``1})">
+<summary>
+ Convert Result to Option, discarding error
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.ofOption``2(``0,Microsoft.FSharp.Core.FSharpOption{``1})">
+<summary>
+ Convert Option to Result with specified error
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.traverse``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpResult{``1,``2}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Traverse a list with a function returning Result
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.sequence``2(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpResult{``0,``1}})">
+<summary>
+ Sequence a list of Results into a Result of list
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.combine``3(Microsoft.FSharp.Core.FSharpResult{``0,``1},Microsoft.FSharp.Core.FSharpResult{``2,``1})">
+<summary>
+ Combine two results, returning the first error if any
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.mapError``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpResult{``2,``0})">
+<summary>
+ Map over the error type
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Result.apply``3(Microsoft.FSharp.Core.FSharpResult{Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2},Microsoft.FSharp.Core.FSharpResult{``0,``2})">
+<summary>
+ Apply a function wrapped in Result to a value wrapped in Result
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Result">
+<summary>
+ Extensions for Result type
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.ResultBuilder.ResultBuilder">
+<summary>
+ Computation expression builder for Result&lt;&apos;T, &apos;E&gt;
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.ResultBuilder.result">
+<summary>
+ Global result computation expression instance
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.ResultBuilder">
+<summary>
+ Result computation expression for railway-oriented programming
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.BusinessPartnerId">
+<summary>
+ Business partner identifier (customer/vendor)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.ProjectId">
+<summary>
+ Project identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.AuditEntryId">
+<summary>
+ Audit entry identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.FilingId">
+<summary>
+ Filing identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.RequirementId">
+<summary>
+ Regulatory requirement identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.VendorId">
+<summary>
+ Vendor identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.ProductCode">
+<summary>
+ Product code (商品コード)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.ProductId">
+<summary>
+ Product identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.OrderNumber">
+<summary>
+ Order number (注文番号)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.OrderId">
+<summary>
+ Order identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.CustomerCode">
+<summary>
+ Customer code (取引先コード)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.CustomerId">
+<summary>
+ Customer identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.InvoiceNumber">
+<summary>
+ Invoice number (請求書番号)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.InvoiceId">
+<summary>
+ Invoice identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.FiscalYearId">
+<summary>
+ Fiscal year identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.JournalEntryId">
+<summary>
+ Journal entry identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.AccountCode">
+<summary>
+ Account code (勘定科目コード)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.AccountId">
+<summary>
+ Account identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.LedgerId">
+<summary>
+ Ledger identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.ContractId">
+<summary>
+ Contract identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.PositionId">
+<summary>
+ Position identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.DepartmentId">
+<summary>
+ Department identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.EmployeeNumber">
+<summary>
+ Employee number (社員番号) - business identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.EmployeeId">
+<summary>
+ Employee identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.BoardId">
+<summary>
+ Board identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.ShareholderId">
+<summary>
+ Shareholder identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.AuditorId">
+<summary>
+ Auditor identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.DirectorId">
+<summary>
+ Director identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.CompanyId">
+<summary>
+ Company aggregate identifier
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity.EntityId`1">
+<summary>
+ Generic entity identifier wrapper
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Identity">
+<summary>
+ Strongly-typed identifiers for domain entities
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.EntityType">
+<summary>
+ Types of companies under Japanese Companies Act
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.BilingualName">
+<summary>
+ Bilingual name supporting Japanese and English
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.JapaneseEra">
+<summary>
+ Japanese era (gengo)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.PostalCode">
+<summary>
+ Japanese postal code (7 digits, format: XXX-XXXX)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.CorporateSeal">
+<summary>
+ Corporate seal value object
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.SealRegistrationStatus">
+<summary>
+ Corporate seal registration status
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.SealType">
+<summary>
+ Types of corporate seals used in Japan
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.Prefecture">
+<summary>
+ Japanese prefectures - all 47 as sum type for exhaustive matching
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese.CorporateNumber">
+<summary>
+ 13-digit corporate number assigned by National Tax Agency
+ Format: 1 check digit + 12 base digits
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.EntityTypeModule.registrationFee(System.Decimal,CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Required registration fee (登録免許税)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.EntityTypeModule.hasLimitedLiability(CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Whether entity type has limited liability for all members
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.EntityTypeModule.recommendedCapital(CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Practical recommended capital
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.EntityTypeModule.minimumCapital(CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Minimum legal capital requirement
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.JapaneseEraModule.formatDate(System.DateTime)">
+<summary>
+ Format date in Japanese era format
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.JapaneseEraModule.fromGregorian(System.DateTime)">
+<summary>
+ Convert Gregorian date to Japanese era date
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.PostalCodeModule.format(CompanyAsCode.SharedKernel.Japanese.PostalCode)">
+<summary>
+ Format as XXX-XXXX
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.PrefectureModule.fromJisCode(System.String)">
+<summary>
+ Parse from JIS code
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.PrefectureModule.toJisCode(CompanyAsCode.SharedKernel.Japanese.Prefecture)">
+<summary>
+ Get JIS code (2-digit)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.PrefectureModule.toJapanese(CompanyAsCode.SharedKernel.Japanese.Prefecture)">
+<summary>
+ Get Japanese name of prefecture
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.CorporateNumberModule.format(CompanyAsCode.SharedKernel.Japanese.CorporateNumber)">
+<summary>
+ Format as XXXX-XX-XXXXXX
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.CorporateNumberModule.createUnsafe(System.String)">
+<summary>
+ Create without validation (for testing/migration)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.CorporateNumberModule.create(System.String)">
+<summary>
+ Create a validated corporate number
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Japanese.CorporateNumberModule.validateChecksum(System.String)">
+<summary>
+ Validate checksum using modulus 9 algorithm
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Japanese">
+<summary>
+ Japanese-specific value objects for business domain
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.BankAccount">
+<summary>
+ Complete bank account information
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.AccountType">
+<summary>
+ Account type
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.BankCode">
+<summary>
+ Bank code (銀行コード)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.BranchCode">
+<summary>
+ Bank branch code (支店コード)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.BankAccountNumber">
+<summary>
+ Bank account number
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.ParValue">
+<summary>
+ Par value per share (額面)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.ShareCount">
+<summary>
+ Number of shares
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.RegisteredCapital">
+<summary>
+ Registered capital amount
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.TaxRate">
+<summary>
+ Tax rate with category
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.TaxCategory">
+<summary>
+ Japanese tax categories
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.Percentage">
+<summary>
+ Percentage value object (stored as decimal, 100% = 1.0)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.Money">
+<summary>
+ Represents a monetary amount with currency
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial.Currency">
+<summary>
+ Supported currencies
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.ParValueModule.totalValue(CompanyAsCode.SharedKernel.Financial.ParValue,CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Calculate total value of shares
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.RegisteredCapitalModule.meetsRecommended(CompanyAsCode.SharedKernel.Japanese.EntityType,CompanyAsCode.SharedKernel.Financial.RegisteredCapital)">
+<summary>
+ Check if capital meets recommended amount
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.RegisteredCapitalModule.meetsMinimum(CompanyAsCode.SharedKernel.Japanese.EntityType,CompanyAsCode.SharedKernel.Financial.RegisteredCapital)">
+<summary>
+ Check if capital meets minimum for entity type
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.TaxRateModule.format(CompanyAsCode.SharedKernel.Financial.TaxRate)">
+<summary>
+ Format tax rate for display
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.TaxRateModule.withTax(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.TaxRate)">
+<summary>
+ Calculate amount including tax
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.TaxRateModule.calculateTax(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.TaxRate)">
+<summary>
+ Calculate tax amount
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Financial.TaxRateModule.outOfScope">
+<summary>
+ Out of scope (not subject to tax)
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Financial.TaxRateModule.exempt">
+<summary>
+ Tax exempt
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Financial.TaxRateModule.reducedConsumptionTax">
+<summary>
+ Reduced consumption tax rate (8%)
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Financial.TaxRateModule.standardConsumptionTax">
+<summary>
+ Standard consumption tax rate (10%)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.PercentageModule.format(CompanyAsCode.SharedKernel.Financial.Percentage)">
+<summary>
+ Format as percentage
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.PercentageModule.applyTo(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Percentage)">
+<summary>
+ Apply percentage to money
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.PercentageModule.fromPercent(System.Decimal)">
+<summary>
+ Create from percentage value (10 = 10%)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.PercentageModule.fromDecimal(System.Decimal)">
+<summary>
+ Create from decimal (0.1 = 10%)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.formatWithCode(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Format with currency code
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.format(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Format for display
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.abs(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Absolute value
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.negate(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Negate amount
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.divide(System.Decimal,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Divide by scalar
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.multiply(System.Decimal,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Multiply by scalar
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.subtract(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Subtract money (must be same currency)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.add(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Add two money values (must be same currency)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.yenInt(System.Int32)">
+<summary>
+ Create from integer yen
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.yen(System.Decimal)">
+<summary>
+ Create Japanese Yen
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.createRounded(System.Decimal,CompanyAsCode.SharedKernel.Financial.Currency)">
+<summary>
+ Create money, rounding to currency precision
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.MoneyModule.create(System.Decimal,CompanyAsCode.SharedKernel.Financial.Currency)">
+<summary>
+ Create money with validation
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Financial.CurrencyModule.decimalPlaces(CompanyAsCode.SharedKernel.Financial.Currency)">
+<summary>
+ Decimal places for currency (JPY has 0)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Financial">
+<summary>
+ Financial value objects for monetary calculations
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.Age">
+<summary>
+ Age in years, months, days
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.Timestamp">
+<summary>
+ Immutable timestamp with timezone
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.DeadlineStatus">
+<summary>
+ Deadline with status tracking
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.TermPeriod">
+<summary>
+ Term period for directors, auditors, etc.
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.DateRange">
+<summary>
+ Date range value object
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.FiscalYear">
+<summary>
+ Fiscal year period
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd">
+<summary>
+ Month and day of fiscal year end
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal.Date">
+<summary>
+ Immutable date value object (date only, no time)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.TermPeriodModule.auditorTerm(CompanyAsCode.SharedKernel.Temporal.Date,System.Int32)">
+<summary>
+ Create auditor term (max 4 years per Companies Act)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.TermPeriodModule.directorTerm(CompanyAsCode.SharedKernel.Temporal.Date,System.Int32)">
+<summary>
+ Create director term (max 2 years per Companies Act)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.TermPeriodModule.create(CompanyAsCode.SharedKernel.Temporal.Date,System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Create term with specified duration
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.FiscalYearModule.forDate(CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Get fiscal year for a given date
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.FiscalYearModule.contains(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.FiscalYear)">
+<summary>
+ Check if date is within fiscal year
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.FiscalYearModule.japaneseStandard(System.Int32)">
+<summary>
+ Create Japanese standard fiscal year (April 1 - March 31)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.FiscalYearModule.create(CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd,System.Int32)">
+<summary>
+ Create fiscal year from end date and year number
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Temporal.FiscalYearEndModule.toDate(System.Int32,CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd)">
+<summary>
+ Get actual date for a given calendar year
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Temporal.FiscalYearEndModule.december31">
+<summary>
+ December 31 (calendar year)
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.Temporal.FiscalYearEndModule.march31">
+<summary>
+ Default Japanese fiscal year end (March 31)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Temporal">
+<summary>
+ Temporal value objects for dates, periods, and deadlines
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.Representative">
+<summary>
+ Representative person
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.RepresentativeTitle">
+<summary>
+ Title/position of representative
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.ContactInfo">
+<summary>
+ Complete contact information
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.WebsiteUrl">
+<summary>
+ Website URL value object
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.PhoneNumber">
+<summary>
+ Phone number value object
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.PhoneType">
+<summary>
+ Phone number type
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.Email">
+<summary>
+ Email address value object
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.Address">
+<summary>
+ Japanese address structure
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact.PersonName">
+<summary>
+ Japanese person name with kanji and furigana
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.PhoneNumberModule.format(CompanyAsCode.SharedKernel.Contact.PhoneNumber)">
+<summary>
+ Format with hyphens
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.AddressModule.formatMultiLine(CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Format as multi-line
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.AddressModule.format(CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Format as single line
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.PersonNameModule.fullNameWithKana(CompanyAsCode.SharedKernel.Contact.PersonName)">
+<summary>
+ Full name with furigana
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.PersonNameModule.fullNameWestern(CompanyAsCode.SharedKernel.Contact.PersonName)">
+<summary>
+ Full name in Western order (given name first)
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.Contact.PersonNameModule.fullName(CompanyAsCode.SharedKernel.Contact.PersonName)">
+<summary>
+ Full name in Japanese order (family name first)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.Contact">
+<summary>
+ Contact information value objects
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.ISyncEventHandler`1">
+<summary>
+ Synchronous event handler
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IEventHandler`1">
+<summary>
+ Event handler interface
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IFactory`4">
+<summary>
+ Factory for creating aggregates
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IDomainService">
+<summary>
+ Marker interface for domain services
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.Specification`1">
+<summary>
+ Composable specification
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.ISpecification`1">
+<summary>
+ Specification for querying aggregates
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IUnitOfWorkWithEvents">
+<summary>
+ Unit of work with event publishing
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IUnitOfWork">
+<summary>
+ Unit of work for transaction management
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IVersionedRepository`2">
+<summary>
+ Repository with optimistic concurrency
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IRepository`2">
+<summary>
+ Generic repository interface
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.CommandResult`3">
+<summary>
+ Result of executing a command on an aggregate
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.Version">
+<summary>
+ Current version for optimistic concurrency
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.PendingEvents">
+<summary>
+ Events raised during command execution
+</summary>
+</member>
+<member name="P:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.Id">
+<summary>
+ Aggregate identifier
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.RaiseEvent(`1)">
+<summary>
+ Raise a domain event
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.ClearPendingEvents">
+<summary>
+ Clear pending events after persistence
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2.Apply(`1)">
+<summary>
+ Apply event to update state (for event sourcing)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.AggregateRoot`2">
+<summary>
+ Abstract base class for aggregate roots (OOP style)
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.AggregateState`2">
+<summary>
+ Generic aggregate state wrapper
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IAggregateState`1">
+<summary>
+ Base interface for aggregate state
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.AggregateVersion">
+<summary>
+ Version for optimistic concurrency
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.DomainEventBase">
+<summary>
+ Base record for domain events
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot.IDomainEvent">
+<summary>
+ Marker interface for domain events
+</summary>
+</member>
+<member name="M:CompanyAsCode.SharedKernel.AggregateRoot.Specification.op_AmpAmpDot``1">
+<summary>
+ Infix operators
+</summary>
+</member>
+<member name="T:CompanyAsCode.SharedKernel.AggregateRoot">
+<summary>
+ Base types and interfaces for DDD aggregates
+</summary>
+</member>
+</members>
+</doc>

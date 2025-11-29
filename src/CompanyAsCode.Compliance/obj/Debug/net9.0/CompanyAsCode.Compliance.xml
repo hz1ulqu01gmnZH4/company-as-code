@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Compliance</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Compliance.Errors.PrivacyError">
+<summary>
+ Errors related to privacy compliance (個人情報保護法)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Errors.AuditError">
+<summary>
+ Errors related to audit operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Errors.FilingError">
+<summary>
+ Errors related to regulatory filings
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Errors.ComplianceError">
+<summary>
+ Errors related to compliance requirements
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Errors">
+<summary>
+ Domain errors for Compliance context
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.ComplianceEvent">
+<summary>
+ All compliance events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.AuditCompletedEvent">
+<summary>
+ Audit completed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.AuditStartedEvent">
+<summary>
+ Audit started event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.FilingAcceptedEvent">
+<summary>
+ Filing accepted event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.FilingSubmittedEvent">
+<summary>
+ Filing submitted event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.ComplianceCheckCompletedEvent">
+<summary>
+ Compliance check completed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.RequirementCreatedEvent">
+<summary>
+ Requirement created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.FindingSeverity">
+<summary>
+ Finding severity
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.AuditStatus">
+<summary>
+ Audit status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.AuditType">
+<summary>
+ Audit type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.FilingStatus">
+<summary>
+ Filing status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.FilingType">
+<summary>
+ Japanese regulatory filing type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.ComplianceStatus">
+<summary>
+ Compliance status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.ComplianceFrequency">
+<summary>
+ Compliance frequency
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.RequirementCategory">
+<summary>
+ Compliance requirement category
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.RegulatoryBody">
+<summary>
+ Japanese regulatory body
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events.ComplianceEventMeta">
+<summary>
+ Compliance event metadata
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.Events">
+<summary>
+ Domain events for Compliance context
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.SetPenalties(System.String)">
+<summary>
+ Set penalties information
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.SetLegalBasis(System.String)">
+<summary>
+ Set legal basis
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.RecordCheck(CompanyAsCode.Compliance.ComplianceRequirement.ComplianceCheck)">
+<summary>
+ Record a compliance check
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.Reactivate">
+<summary>
+ Reactivate the requirement
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.MarkNonCompliant(System.String,CompanyAsCode.SharedKernel.Temporal.Date,System.String)">
+<summary>
+ Mark as non-compliant
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.MarkCompliant(System.String,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Mark as compliant
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.FromState(CompanyAsCode.Compliance.ComplianceRequirement.RequirementState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.Deactivate">
+<summary>
+ Deactivate the requirement
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String,CompanyAsCode.Compliance.Events.RequirementCategory,CompanyAsCode.Compliance.Events.RegulatoryBody,CompanyAsCode.Compliance.Events.ComplianceFrequency)">
+<summary>
+ Create a new compliance requirement
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement">
+<summary>
+ Compliance requirement aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.ComplianceRequirement.RequirementState">
+<summary>
+ Requirement state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceCheck">
+<summary>
+ Record of a compliance check
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.ComplianceRequirement.RequirementCode">
+<summary>
+ Unique requirement code
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceLogic.byRegulatoryBody(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement})">
+<summary>
+ Group by regulatory body
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceLogic.byCategory(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement})">
+<summary>
+ Group by category
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceLogic.nonCompliantRequirements(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement})">
+<summary>
+ Get non-compliant requirements
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.ComplianceRequirement.ComplianceLogic.overdueRequirements(CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.ComplianceRequirement.ComplianceRequirement})">
+<summary>
+ Get overdue requirements
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.ComplianceRequirement">
+<summary>
+ Compliance Requirement aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.Submit(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Submit the filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.StartPreparation(System.String)">
+<summary>
+ Mark as under preparation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.SetFilingPeriod(CompanyAsCode.Compliance.RegulatoryFiling.FilingPeriod)">
+<summary>
+ Set filing period
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.MarkRejected(System.String)">
+<summary>
+ Mark as rejected
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.MarkReady(System.String)">
+<summary>
+ Mark as ready for submission
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.MarkAttachmentUploaded(System.Guid)">
+<summary>
+ Mark attachment as uploaded
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.MarkAcknowledged(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Mark as acknowledged
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.MarkAccepted(CompanyAsCode.SharedKernel.Temporal.Date,System.String)">
+<summary>
+ Mark as accepted
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.FromState(CompanyAsCode.Compliance.RegulatoryFiling.FilingState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,CompanyAsCode.Compliance.Events.FilingType,CompanyAsCode.Compliance.Events.RegulatoryBody,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create a new filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling.AddAttachment(CompanyAsCode.Compliance.RegulatoryFiling.FilingAttachment)">
+<summary>
+ Add attachment
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling">
+<summary>
+ Regulatory filing aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling.FilingState">
+<summary>
+ Filing state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling.FilingPeriod">
+<summary>
+ Filing period
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling.FilingAttachment">
+<summary>
+ Filing attachment
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling.FilingNumber">
+<summary>
+ Filing number/reference
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingLogic.filingDeadlines(CompanyAsCode.Compliance.Events.RegulatoryBody,CompanyAsCode.Compliance.Events.FilingType)">
+<summary>
+ Get filing deadlines for a regulatory body
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingLogic.byFilingType(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling})">
+<summary>
+ Group by filing type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingLogic.byRegulatoryBody(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling})">
+<summary>
+ Group by regulatory body
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingLogic.upcomingFilings(System.Int32,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling})">
+<summary>
+ Get upcoming filings within days
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingLogic.overdueFilings(CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Compliance.RegulatoryFiling.RegulatoryFiling})">
+<summary>
+ Get overdue filings
+</summary>
+</member>
+<member name="M:CompanyAsCode.Compliance.RegulatoryFiling.FilingNumberModule.generate(System.String,System.Int32,System.Int32)">
+<summary>
+ Generate a filing number
+</summary>
+</member>
+<member name="T:CompanyAsCode.Compliance.RegulatoryFiling">
+<summary>
+ Regulatory Filing aggregate
+</summary>
+</member>
+</members>
+</doc>

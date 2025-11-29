@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Errors.fs" />
+    <Compile Include="Events.fs" />
+    <Compile Include="Account.fs" />
+    <Compile Include="JournalEntry.fs" />
+    <Compile Include="GeneralLedger.fs" />
+    <Compile Include="Tax.fs" />
+    <Compile Include="Invoice.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyAsCode.SharedKernel\CompanyAsCode.SharedKernel.fsproj" />
+  </ItemGroup>
+
+</Project>

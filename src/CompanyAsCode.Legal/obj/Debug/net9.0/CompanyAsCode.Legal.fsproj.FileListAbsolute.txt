@@ -1,0 +1,17 @@
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.Legal.deps.json
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.Legal.dll
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.Legal.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.Legal.xml
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.SharedKernel.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Legal/bin/Debug/net9.0/CompanyAsCode.SharedKernel.xml
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.fsproj.AssemblyReference.cache
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.AssemblyInfoInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.AssemblyInfo.fs
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.fsproj.CoreCompileInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyA.72F72DCF.Up2Date
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.dll
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/refint/CompanyAsCode.Legal.dll
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.xml
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/CompanyAsCode.Legal.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Legal/obj/Debug/net9.0/ref/CompanyAsCode.Legal.dll

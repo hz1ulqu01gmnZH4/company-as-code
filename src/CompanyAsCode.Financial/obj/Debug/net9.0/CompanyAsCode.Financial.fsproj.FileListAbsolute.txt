@@ -1,0 +1,17 @@
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.Financial.deps.json
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.Financial.dll
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.Financial.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.Financial.xml
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.SharedKernel.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Financial/bin/Debug/net9.0/CompanyAsCode.SharedKernel.xml
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.fsproj.AssemblyReference.cache
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.AssemblyInfoInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.AssemblyInfo.fs
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.fsproj.CoreCompileInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyA.AEF70883.Up2Date
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.dll
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/refint/CompanyAsCode.Financial.dll
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.xml
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/CompanyAsCode.Financial.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/Debug/net9.0/ref/CompanyAsCode.Financial.dll

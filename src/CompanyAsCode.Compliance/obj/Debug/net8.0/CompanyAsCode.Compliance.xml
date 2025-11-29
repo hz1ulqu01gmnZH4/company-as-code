@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Compliance</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Compliance.Placeholder">
+<summary>
+ Placeholder for Compliance context - to be implemented
+</summary>
+</member>
+</members>
+</doc>

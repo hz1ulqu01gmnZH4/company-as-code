@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ak/company-as-code/src/CompanyAsCode.Financial/CompanyAsCode.Financial.fsproj": {}
+  },
+  "projects": {
+    "/home/ak/company-as-code/src/CompanyAsCode.Financial/CompanyAsCode.Financial.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ak/company-as-code/src/CompanyAsCode.Financial/CompanyAsCode.Financial.fsproj",
+        "projectName": "CompanyAsCode.Financial",
+        "projectPath": "/home/ak/company-as-code/src/CompanyAsCode.Financial/CompanyAsCode.Financial.fsproj",
+        "packagesPath": "/home/ak/.nuget/packages/",
+        "outputPath": "/home/ak/company-as-code/src/CompanyAsCode.Financial/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ak/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/home/ak/nuget-local-feed": {},
+          "/usr/share/dotnet/sdk/9.0.110/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/CompanyAsCode.SharedKernel.fsproj": {
+                "projectPath": "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/CompanyAsCode.SharedKernel.fsproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[9.0.101, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.9, 9.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/CompanyAsCode.SharedKernel.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/CompanyAsCode.SharedKernel.fsproj",
+        "projectName": "CompanyAsCode.SharedKernel",
+        "projectPath": "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/CompanyAsCode.SharedKernel.fsproj",
+        "packagesPath": "/home/ak/.nuget/packages/",
+        "outputPath": "/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ak/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/home/ak/nuget-local-feed": {},
+          "/usr/share/dotnet/sdk/9.0.110/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[9.0.101, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.9, 9.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

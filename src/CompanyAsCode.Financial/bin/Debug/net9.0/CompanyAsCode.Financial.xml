@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Financial</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Financial.Errors.FinancialError">
+<summary>
+ Union of all financial context errors
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors.InvoiceError">
+<summary>
+ Errors related to invoice operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors.TaxError">
+<summary>
+ Errors related to tax operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors.LedgerError">
+<summary>
+ Errors related to general ledger operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors.JournalEntryError">
+<summary>
+ Errors related to journal entry operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors.AccountError">
+<summary>
+ Errors related to account operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Errors">
+<summary>
+ Domain errors for Financial &amp; Accounting context
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.FinancialEvent">
+<summary>
+ Union of all financial context events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.InvoicePaymentReceivedEvent">
+<summary>
+ Invoice payment received event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.InvoiceCreatedEvent">
+<summary>
+ Invoice created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.InvoiceStatus">
+<summary>
+ Invoice status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.InvoiceType">
+<summary>
+ Invoice type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.TaxFilingSubmittedEvent">
+<summary>
+ Tax filing submitted event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.TaxCalculationCompletedEvent">
+<summary>
+ Tax calculation completed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.FilingStatus">
+<summary>
+ Tax filing status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.TaxType">
+<summary>
+ Tax type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.FiscalYearClosedEvent">
+<summary>
+ Fiscal year closed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountingPeriodClosedEvent">
+<summary>
+ Accounting period closed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountingPeriodOpenedEvent">
+<summary>
+ Accounting period opened event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.PeriodStatus">
+<summary>
+ Accounting period status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.FiscalYearOpenedEvent">
+<summary>
+ Fiscal year opened event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.JournalEntryReversedEvent">
+<summary>
+ Journal entry reversed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.JournalEntryPostedEvent">
+<summary>
+ Journal entry posted event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.JournalEntryCreatedEvent">
+<summary>
+ Journal entry created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.JournalEntryLine">
+<summary>
+ Journal entry line
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.DebitCredit">
+<summary>
+ Debit/Credit indicator
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountDeactivatedEvent">
+<summary>
+ Account deactivated event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountCreatedEvent">
+<summary>
+ Account created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountSubType">
+<summary>
+ Account sub-types for Japanese accounting
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.AccountType">
+<summary>
+ Account type classification
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events.FinancialEventMeta">
+<summary>
+ Common metadata for all financial events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Events">
+<summary>
+ Domain events for Financial &amp; Accounting context
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.SetSubType(CompanyAsCode.Financial.Events.AccountSubType)">
+<summary>
+ Set sub-type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.SetParentAccount(CompanyAsCode.SharedKernel.Identity.AccountId)">
+<summary>
+ Set parent account (for sub-accounts)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.Reactivate">
+<summary>
+ Reactivate the account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.PostDebit(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Post a debit to the account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.PostCredit(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Post a credit to the account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.MarkAsControlAccount">
+<summary>
+ Mark as control account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.FromState(CompanyAsCode.Financial.Account.AccountState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.Deactivate">
+<summary>
+ Deactivate the account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.Account.Create(System.String,System.String,System.String,CompanyAsCode.Financial.Events.AccountType,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create a new account
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account.Account">
+<summary>
+ Account entity
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account.AccountState">
+<summary>
+ Account state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account.AccountStatus">
+<summary>
+ Account status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account.AccountCode">
+<summary>
+ Account code - follows Japanese standard chart of accounts
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.AccountLogic.calculateBalanceImpact(CompanyAsCode.Financial.Events.DebitCredit,CompanyAsCode.Financial.Events.DebitCredit,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Calculate balance direction
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.AccountLogic.getNormalBalance(CompanyAsCode.Financial.Events.AccountType)">
+<summary>
+ Get normal balance for account type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.AccountLogic.isIncomeStatementAccount(CompanyAsCode.Financial.Events.AccountType)">
+<summary>
+ Determine if account is an income statement account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.AccountLogic.isBalanceSheetAccount(CompanyAsCode.Financial.Events.AccountType)">
+<summary>
+ Determine if account is a balance sheet account
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account.StandardAccounts.StandardAccountDef">
+<summary>
+ Standard account definitions for Japanese companies
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.all">
+<summary>
+ All standard accounts
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.expenses">
+<summary>
+ Expenses (費用)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.revenue">
+<summary>
+ Revenue (収益)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.equity">
+<summary>
+ Equity (純資産)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.liabilities">
+<summary>
+ Liabilities (負債)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Account.StandardAccounts.assets">
+<summary>
+ Assets (資産)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Account.AccountCodeModule.create(System.String)">
+<summary>
+ Japanese standard account code ranges:
+ 1xx: Assets (資産)
+ 2xx: Liabilities (負債)
+ 3xx: Equity (純資産)
+ 4xx: Revenue (収益)
+ 5xx: Cost of Sales (売上原価)
+ 6xx: Selling &amp; Admin Expenses (販売費及び一般管理費)
+ 7xx: Non-operating Income/Expenses (営業外収益・費用)
+ 8xx: Extraordinary Items (特別損益)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Account">
+<summary>
+ Account entity and Chart of Accounts
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.UpdateDescription(System.String)">
+<summary>
+ Update description
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.SubmitForApproval">
+<summary>
+ Submit for approval
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.SetSourceDocument(System.String,System.String)">
+<summary>
+ Set source document reference
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.RemoveLine(CompanyAsCode.SharedKernel.Identity.AccountId,CompanyAsCode.Financial.Events.DebitCredit)">
+<summary>
+ Remove a line from the entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.Post(CompanyAsCode.SharedKernel.Temporal.Date,System.String)">
+<summary>
+ Post the entry to the ledger
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.FromState(CompanyAsCode.Financial.JournalEntry.JournalEntryState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.CreateWithLines(System.String,CompanyAsCode.SharedKernel.Identity.FiscalYearId,CompanyAsCode.SharedKernel.Temporal.Date,System.String,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.JournalEntry.EntryLine},System.String)">
+<summary>
+ Create entry with lines
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.CreateReversal(CompanyAsCode.SharedKernel.Temporal.Date,System.String,System.String)">
+<summary>
+ Reverse the entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.Create(System.String,CompanyAsCode.SharedKernel.Identity.FiscalYearId,CompanyAsCode.SharedKernel.Temporal.Date,System.String,System.String)">
+<summary>
+ Create a new journal entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.Approve(System.String)">
+<summary>
+ Approve the entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntry.AddLine(CompanyAsCode.Financial.JournalEntry.EntryLine)">
+<summary>
+ Add a line to the entry
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.JournalEntry.JournalEntry">
+<summary>
+ Journal entry aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.JournalEntry.JournalEntryState">
+<summary>
+ Journal entry state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.JournalEntry.EntryStatus">
+<summary>
+ Entry status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.JournalEntry.EntryLine">
+<summary>
+ Line item in a journal entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntryLogic.groupByAccount(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.JournalEntry.EntryLine})">
+<summary>
+ Group lines by account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntryLogic.validateBalance(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.JournalEntry.EntryLine})">
+<summary>
+ Validate entry balance
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntryLogic.accountNetImpact(CompanyAsCode.SharedKernel.Identity.AccountId,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.JournalEntry.EntryLine})">
+<summary>
+ Calculate net impact on account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.JournalEntry.JournalEntryLogic.createSimpleEntry(CompanyAsCode.SharedKernel.Identity.AccountId,System.String,System.String,CompanyAsCode.SharedKernel.Identity.AccountId,System.String,System.String,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Create a simple two-line entry (debit one account, credit another)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.JournalEntry">
+<summary>
+ Journal Entry aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.PostEntry(CompanyAsCode.Financial.JournalEntry.JournalEntry)">
+<summary>
+ Post a journal entry
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.OpenPeriod(System.Int32)">
+<summary>
+ Open a period
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.InitializePeriods(System.Int32)">
+<summary>
+ Initialize accounting periods (typically 12 monthly periods)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.GetCurrentPeriod">
+<summary>
+ Get current period
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.GetAllBalances">
+<summary>
+ Get all account balances
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.GetAccountBalance(CompanyAsCode.SharedKernel.Identity.AccountId)">
+<summary>
+ Get account balance
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.GetAccount(CompanyAsCode.SharedKernel.Identity.AccountId)">
+<summary>
+ Get account by ID
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.GenerateTrialBalance(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Generate trial balance
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.FromState(CompanyAsCode.Financial.GeneralLedger.LedgerState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create a new general ledger
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.ClosePeriod(System.Int32,System.String,System.Boolean)">
+<summary>
+ Close a period
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.CloseFiscalYear(System.String)">
+<summary>
+ Close the fiscal year
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.GeneralLedger.AddAccount(CompanyAsCode.Financial.Account.Account)">
+<summary>
+ Add an account to the ledger
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.GeneralLedger">
+<summary>
+ General ledger aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.LedgerState">
+<summary>
+ General ledger state
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.LedgerStatus">
+<summary>
+ Ledger status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.AccountingPeriod">
+<summary>
+ Accounting period within a fiscal year
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.TrialBalance">
+<summary>
+ Trial balance summary
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger.AccountBalance">
+<summary>
+ Running balance for an account
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.verifyAccountingEquation(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Verify accounting equation: Assets = Liabilities + Equity
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.netIncome(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate net income
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.totalExpenses(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate total expenses
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.totalRevenue(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate total revenue
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.totalEquity(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate total equity
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.totalLiabilities(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate total liabilities
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.totalAssets(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate total assets
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.GeneralLedger.LedgerLogic.calculateTypeTotal(CompanyAsCode.Financial.Events.AccountType,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.GeneralLedger.AccountBalance})">
+<summary>
+ Calculate account type totals
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.GeneralLedger">
+<summary>
+ General Ledger aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.Submit(CompanyAsCode.SharedKernel.Temporal.Date,System.String)">
+<summary>
+ Submit the filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.RecordPayment(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Record payment
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.MarkRejected(System.String)">
+<summary>
+ Mark as rejected
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.MarkAccepted(System.String)">
+<summary>
+ Mark as accepted
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.FromState(CompanyAsCode.Financial.Tax.TaxFilingState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.CreateCorporateTax(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.SharedKernel.Temporal.DateRange,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.Financial.Tax.CorporateTaxCalculation)">
+<summary>
+ Create a corporate tax filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.CreateConsumptionTax(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.SharedKernel.Temporal.DateRange,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.Financial.Tax.ConsumptionTaxCalculation)">
+<summary>
+ Create a consumption tax filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxFiling.Amend(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Amend the filing
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.TaxFiling">
+<summary>
+ Tax filing aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.TaxFilingState">
+<summary>
+ Tax filing state
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.ConsumptionTaxCalculation">
+<summary>
+ Consumption tax calculation
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.CorporateTaxCalculation">
+<summary>
+ Corporate tax calculation result
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.TaxableIncome">
+<summary>
+ Taxable income calculation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.latePenalty(CompanyAsCode.SharedKernel.Financial.Money,System.Int32)">
+<summary>
+ Calculate penalty for late filing (simplified)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.isOverdue(CompanyAsCode.Financial.Tax.TaxFiling,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Check if filing is overdue
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.professionalFeeWithholdingTax(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Calculate withholding tax on professional fees
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.dividendWithholdingTax(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Calculate withholding tax on dividends
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.isConsumptionTaxable(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Determine if company is subject to consumption tax
+ (Taxable sales in base period &gt; ¥10,000,000)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.consumptionTaxDueDate(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate consumption tax due date (2 months after period end)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Tax.TaxLogic.corporateTaxDueDate(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate corporate tax due date (2 months after fiscal year end)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.ConsumptionTaxRates.localPortion">
+<summary>
+ Local consumption tax portion
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.ConsumptionTaxRates.nationalPortion">
+<summary>
+ National consumption tax portion
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.ConsumptionTaxRates.reducedRate">
+<summary>
+ Reduced rate (food, newspapers)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.ConsumptionTaxRates.standardRate">
+<summary>
+ Standard rate
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.ConsumptionTaxRates">
+<summary>
+ Japanese consumption tax rates
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.effectiveRate">
+<summary>
+ Effective combined rate (approximate)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.smeThreshold">
+<summary>
+ SME income threshold
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.smeRate">
+<summary>
+ Special corporate tax rate (for SMEs, income &lt;= ¥8M)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.enterpriseRate">
+<summary>
+ Enterprise tax rate (standard)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.inhabitantRate">
+<summary>
+ Inhabitant tax rate (prefectural + municipal)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.localCorporateRate">
+<summary>
+ Local corporate tax rate (as % of national tax)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Tax.CorporateTaxRates.nationalRate">
+<summary>
+ National corporate tax rate
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax.CorporateTaxRates">
+<summary>
+ Japanese corporate tax rates (2024)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Tax">
+<summary>
+ Tax calculation and filing
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.RecordPayment(CompanyAsCode.Financial.Invoice.PaymentRecord)">
+<summary>
+ Record a payment
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.MarkSent">
+<summary>
+ Mark as sent
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.MarkDisputed(System.String)">
+<summary>
+ Mark as disputed
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.Issue">
+<summary>
+ Issue the invoice
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.FromState(CompanyAsCode.Financial.Invoice.InvoiceState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.CreateSalesInvoice(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Core.FSharpOption{CompanyAsCode.Financial.Invoice.QualifiedInvoiceNumber})">
+<summary>
+ Create a sales invoice
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.CreatePurchaseInvoice(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Core.FSharpOption{CompanyAsCode.Financial.Invoice.QualifiedInvoiceNumber})">
+<summary>
+ Create a purchase invoice
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.Cancel(System.String)">
+<summary>
+ Cancel the invoice
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.Invoice.AddLineItem(CompanyAsCode.Financial.Invoice.InvoiceLineItem)">
+<summary>
+ Add a line item
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.Invoice">
+<summary>
+ Invoice aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.InvoiceState">
+<summary>
+ Invoice state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.PaymentRecord">
+<summary>
+ Payment record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.PaymentMethod">
+<summary>
+ Payment method
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.InvoiceLineItem">
+<summary>
+ Invoice line item
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.TaxRateCategory">
+<summary>
+ Tax rate category for invoice
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice.QualifiedInvoiceNumber">
+<summary>
+ Qualified invoice registration number (T + 13 digits)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.validateQualifiedInvoice(CompanyAsCode.Financial.Invoice.Invoice)">
+<summary>
+ Validate qualified invoice requirements
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.totalOverdue(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.Invoice.Invoice},CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate total overdue
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.totalOutstanding(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.Invoice.Invoice})">
+<summary>
+ Calculate total outstanding
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.groupByStatus(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Financial.Invoice.Invoice})">
+<summary>
+ Group invoices by status
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.daysOverdue(CompanyAsCode.Financial.Invoice.Invoice,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate days overdue
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.invoiceAge(CompanyAsCode.Financial.Invoice.Invoice,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate age of invoice
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.InvoiceLogic.calculateDueDate(CompanyAsCode.SharedKernel.Temporal.Date,System.Int32)">
+<summary>
+ Calculate due date based on issue date and terms
+</summary>
+</member>
+<member name="P:CompanyAsCode.Financial.Invoice.InvoiceLogic.standardPaymentTermsDays">
+<summary>
+ Standard payment terms in Japan
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.QualifiedInvoiceNumberModule.fromCorporateNumber(System.String)">
+<summary>
+ Create from corporate number
+</summary>
+</member>
+<member name="M:CompanyAsCode.Financial.Invoice.QualifiedInvoiceNumberModule.create(System.String)">
+<summary>
+ Format: T + 13-digit corporate number
+</summary>
+</member>
+<member name="T:CompanyAsCode.Financial.Invoice">
+<summary>
+ Invoice aggregate (Qualified Invoice System - インボイス制度)
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="SharedKernelTests.fs" />
+    <Compile Include="LegalContextTests.fs" />
+    <Compile Include="FinancialContextTests.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FsUnit.xUnit" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CompanyAsCode.SharedKernel\CompanyAsCode.SharedKernel.fsproj" />
+    <ProjectReference Include="..\..\src\CompanyAsCode.Legal\CompanyAsCode.Legal.fsproj" />
+    <ProjectReference Include="..\..\src\CompanyAsCode.HR\CompanyAsCode.HR.fsproj" />
+    <ProjectReference Include="..\..\src\CompanyAsCode.Financial\CompanyAsCode.Financial.fsproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Legal</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Legal.Errors.LegalError">
+<summary>
+ Union of all legal context errors
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors.SealError">
+<summary>
+ Errors related to corporate seal operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors.ShareholderError">
+<summary>
+ Errors related to shareholder operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors.BoardError">
+<summary>
+ Errors related to board operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors.DirectorError">
+<summary>
+ Errors related to director operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors.CompanyError">
+<summary>
+ Errors related to company operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Errors">
+<summary>
+ Domain errors for Legal &amp; Corporate Governance context
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.LegalEvent">
+<summary>
+ Union of all legal context events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CorporateSealRetiredEvent">
+<summary>
+ Corporate seal retired event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CorporateSealRegisteredEvent">
+<summary>
+ Corporate seal registered event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.ShareholderResolutionType">
+<summary>
+ Types of shareholder resolutions
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.ShareholderResolutionPassedEvent">
+<summary>
+ Shareholder resolution passed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.ShareholderMeetingType">
+<summary>
+ Types of shareholder meetings
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.ShareholderMeetingHeldEvent">
+<summary>
+ Shareholder meeting held event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.SharesTransferredEvent">
+<summary>
+ Shares transferred event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.SharesIssuedEvent">
+<summary>
+ Shares issued event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.ResolutionType">
+<summary>
+ Types of board resolutions
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.BoardResolutionPassedEvent">
+<summary>
+ Board resolution passed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.BoardMeetingHeldEvent">
+<summary>
+ Board meeting held event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.BoardStructure">
+<summary>
+ Board structure types
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.BoardEstablishedEvent">
+<summary>
+ Board established event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.DirectorTermRenewedEvent">
+<summary>
+ Director term renewed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.DirectorRemovalReason">
+<summary>
+ Reason for director removal
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.DirectorRemovedEvent">
+<summary>
+ Director removed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.RepresentativeDirectorDesignatedEvent">
+<summary>
+ Representative director designated event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.DirectorPosition">
+<summary>
+ Director position
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.DirectorAppointedEvent">
+<summary>
+ Director appointed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CompanyDissolvedEvent">
+<summary>
+ Company dissolved event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.LiquidationInitiatedEvent">
+<summary>
+ Liquidation initiated event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.FiscalYearEndChangedEvent">
+<summary>
+ Fiscal year end changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.HeadquartersChangedEvent">
+<summary>
+ Headquarters address changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CompanyNameChangedEvent">
+<summary>
+ Company name changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CapitalDecreasedEvent">
+<summary>
+ Capital decreased event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CapitalIncreasedEvent">
+<summary>
+ Capital increased event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.CompanyIncorporatedEvent">
+<summary>
+ Company incorporated event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events.LegalEventMeta">
+<summary>
+ Common metadata for all legal events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Events">
+<summary>
+ Domain events for Legal &amp; Corporate Governance context
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Director.Director.State">
+<summary>
+ Current state (read-only)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.UpdateContact(CompanyAsCode.SharedKernel.Contact.ContactInfo)">
+<summary>
+ Update contact information
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.UpdateCompensation(CompanyAsCode.Legal.Director.DirectorCompensation)">
+<summary>
+ Update compensation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.Resign(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Resign from position
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.RenewTerm(System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Renew term
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.RemoveRepresentativeDesignation">
+<summary>
+ Remove representative designation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.MarkAsRegistered(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Mark as registered with Legal Affairs Bureau
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.IsTermExpiredOn(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Check if term is expired as of date
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.FromState(CompanyAsCode.Legal.Director.DirectorState)">
+<summary>
+ Reconstitute from state (for persistence)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.ExpireTerm">
+<summary>
+ Mark term as expired
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.Dismiss(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Dismiss from position
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.DesignateAsRepresentative">
+<summary>
+ Designate as representative director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.DaysRemainingInTerm(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Days remaining in term
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.CreateOutsideDirector(CompanyAsCode.SharedKernel.Contact.PersonName,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create an outside director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.CreateInsideDirector(CompanyAsCode.SharedKernel.Contact.PersonName,CompanyAsCode.Legal.Events.DirectorPosition,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create an inside director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.CreateIndependentDirector(CompanyAsCode.SharedKernel.Contact.PersonName,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create an independent outside director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.Director.Create(CompanyAsCode.SharedKernel.Identity.DirectorId,CompanyAsCode.SharedKernel.Contact.PersonName,CompanyAsCode.Legal.Events.DirectorPosition,CompanyAsCode.Legal.Director.DirectorClassification,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create a new director
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.Director">
+<summary>
+ Director entity
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.RegistrationStatus">
+<summary>
+ Registration status with Legal Affairs Bureau
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.DirectorState">
+<summary>
+ Internal state of a director
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.DirectorCompensation">
+<summary>
+ Director compensation
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.DirectorClassification">
+<summary>
+ Director classification
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.DirectorStatus">
+<summary>
+ Director status
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.findExpiringTerms(System.Int32,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director})">
+<summary>
+ Find directors with expiring terms
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.countOutsideDirectors(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director})">
+<summary>
+ Count outside directors
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.getRepresentativeDirectors(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director})">
+<summary>
+ Get representative directors
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.getActiveDirectors(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director})">
+<summary>
+ Get active directors
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.meetsOutsideDirectorRequirement(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director},System.Int32)">
+<summary>
+ Check if outside director requirement is met
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.validateTerm(System.Int32)">
+<summary>
+ Validate director term
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Director.DirectorLogic.canAppointToPosition(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director},CompanyAsCode.Legal.Events.DirectorPosition)">
+<summary>
+ Check if director can be appointed to position
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Director.DirectorLogic.maxAuditorTermYears">
+<summary>
+ Maximum auditor term in years (Companies Act)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Director.DirectorLogic.maxTermYears">
+<summary>
+ Maximum director term in years (Companies Act)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director.DirectorLogic">
+<summary>
+ Pure business logic for director operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Director">
+<summary>
+ Director entity and related types
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.TransferShares(CompanyAsCode.SharedKernel.Identity.ShareholderId,CompanyAsCode.SharedKernel.Identity.ShareholderId,CompanyAsCode.SharedKernel.Financial.ShareCount,CompanyAsCode.SharedKernel.Temporal.Date,System.Boolean)">
+<summary>
+ Transfer shares between shareholders
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.SetTransferRestriction(CompanyAsCode.Legal.Shareholder.TransferRestriction)">
+<summary>
+ Update transfer restriction
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.SetParValue(CompanyAsCode.SharedKernel.Financial.ParValue)">
+<summary>
+ Set par value
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.IssueShares(CompanyAsCode.Legal.Shareholder.ShareholderType,CompanyAsCode.SharedKernel.Financial.ShareCount,CompanyAsCode.Legal.Shareholder.ShareClass,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Issue new shares
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.IncreaseAuthorizedShares(CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Increase authorized shares
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.GetShareholdingsByType(Microsoft.FSharp.Core.FSharpFunc{CompanyAsCode.Legal.Shareholder.ShareholderType,System.Boolean})">
+<summary>
+ Get shareholdings by type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.GetShareholding(CompanyAsCode.SharedKernel.Identity.ShareholderId)">
+<summary>
+ Get shareholding by ID
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.GetAllShareholdings">
+<summary>
+ Get all shareholdings
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.FromState(CompanyAsCode.Legal.Shareholder.ShareholderRegisterState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderRegister.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.SharedKernel.Financial.ShareCount,CompanyAsCode.Legal.Shareholder.TransferRestriction)">
+<summary>
+ Create new shareholder register
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.ShareholderRegister">
+<summary>
+ Shareholder register aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.ShareholderRegisterState">
+<summary>
+ Shareholder register aggregate state
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.ShareholdingState">
+<summary>
+ Individual shareholding record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.ShareholderType">
+<summary>
+ Shareholder type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.CertificateStatus">
+<summary>
+ Share certificate status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.TransferRestriction">
+<summary>
+ Share transfer restriction
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder.ShareClass">
+<summary>
+ Share class
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.specialResolutionPasses(System.Int64,System.Int64)">
+<summary>
+ Check if special resolution passes (2/3 majority)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.ordinaryResolutionPasses(System.Int64,System.Int64)">
+<summary>
+ Check if ordinary resolution passes
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.calculateQuorum(System.Int64,System.Int64)">
+<summary>
+ Calculate quorum for shareholder meeting
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.groupByType(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Shareholder.ShareholdingState})">
+<summary>
+ Group shareholdings by shareholder type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.dividendPerShare(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Calculate dividend amount per share
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.hasBlockingMinority(CompanyAsCode.Legal.Shareholder.ShareholdingState,CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Check if shareholder has blocking minority (&gt;33.3%)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.hasControllingInterest(CompanyAsCode.Legal.Shareholder.ShareholdingState,CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Check if shareholder has controlling interest (&gt;50%)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Shareholder.ShareholderLogic.ownershipPercentage(CompanyAsCode.Legal.Shareholder.ShareholdingState,CompanyAsCode.SharedKernel.Financial.ShareCount)">
+<summary>
+ Calculate ownership percentage
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Shareholder">
+<summary>
+ Shareholder entities and share management
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Board.Board.Quorum">
+<summary>
+ Calculate quorum
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.Validate">
+<summary>
+ Validate board meets legal requirements
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.RenewDirectorTerm(CompanyAsCode.SharedKernel.Identity.DirectorId,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Renew director term
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.RemoveDirector(CompanyAsCode.SharedKernel.Identity.DirectorId)">
+<summary>
+ Remove a director from the board
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.RecordMeeting(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.Legal.Board.MeetingType,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Board.AttendanceRecord})">
+<summary>
+ Record a board meeting
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.PassResolution(CompanyAsCode.Legal.Events.ResolutionType,System.String,System.Int32,System.Int32,System.Int32,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Pass a resolution
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.GetRepresentativeDirector">
+<summary>
+ Get representative director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.GetDirector(CompanyAsCode.SharedKernel.Identity.DirectorId)">
+<summary>
+ Get director by ID
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.GetActiveDirectors">
+<summary>
+ Get all active directors
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.FromState(CompanyAsCode.Legal.Board.BoardState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.DesignateRepresentativeDirector(CompanyAsCode.SharedKernel.Identity.DirectorId)">
+<summary>
+ Designate representative director
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.CreateWithDirectors(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.Legal.Events.BoardStructure,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Legal.Director.Director},CompanyAsCode.SharedKernel.Identity.DirectorId,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create board with initial directors
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,CompanyAsCode.Legal.Events.BoardStructure,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Create a new board
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.Board.AddDirector(CompanyAsCode.Legal.Director.Director)">
+<summary>
+ Add a director to the board
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.Board">
+<summary>
+ Board of Directors aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.BoardState">
+<summary>
+ Board state
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.BoardResolution">
+<summary>
+ Board resolution
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.ResolutionStatus">
+<summary>
+ Resolution status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.BoardMeeting">
+<summary>
+ Board meeting record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.AttendanceRecord">
+<summary>
+ Meeting attendance record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board.MeetingType">
+<summary>
+ Board meeting type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.BoardLogic.getExpiringTerms(CompanyAsCode.Legal.Board.Board,System.Int32)">
+<summary>
+ Get expiring terms within days
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.BoardLogic.requiresSpecialMajority(CompanyAsCode.Legal.Events.ResolutionType)">
+<summary>
+ Check if resolution requires special majority
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.BoardLogic.quorumPercentage(System.Int32,System.Int32)">
+<summary>
+ Calculate meeting quorum percentage
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.BoardLogic.requiredOutsideDirectorRatio(CompanyAsCode.Legal.Events.BoardStructure)">
+<summary>
+ Get required outside director ratio
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Board.BoardLogic.allowsSimplifiedGovernance(CompanyAsCode.Legal.Events.BoardStructure)">
+<summary>
+ Check if board structure allows simplified governance
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Board">
+<summary>
+ Board of Directors aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.Validate">
+<summary>
+ Validate company state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.UpdateNetAssets(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Update net assets (for dividend validation)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.UpdateLegalReserve(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Update legal reserve
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.Suspend">
+<summary>
+ Suspend company operations
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.Resume">
+<summary>
+ Resume company operations
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.RegisterSeal(CompanyAsCode.SharedKernel.Japanese.SealType,CompanyAsCode.SharedKernel.Temporal.Date,System.String)">
+<summary>
+ Register corporate seal
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.InitiateLiquidation(System.String,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Initiate liquidation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.IncreaseCapital(CompanyAsCode.SharedKernel.Financial.Money,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Increase registered capital
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.FromState(CompanyAsCode.Legal.Company.CompanyState)">
+<summary>
+ Reconstitute company from state (for persistence)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.Dissolve(System.String,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Complete dissolution
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.CreateFromState(CompanyAsCode.Legal.Company.CompanyState)">
+<summary>
+ Internal constructor for factory
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.ChangeName(CompanyAsCode.SharedKernel.Japanese.BilingualName,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Change company name
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.ChangeHeadquarters(CompanyAsCode.SharedKernel.Contact.Address,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Change headquarters address
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.ChangeFiscalYearEnd(CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Change fiscal year end
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.CanPayDividendOf(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Check if company can pay specified dividend
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.Company.AssociateBoard(CompanyAsCode.SharedKernel.Identity.BoardId)">
+<summary>
+ Associate board with company
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company.Company">
+<summary>
+ Company aggregate root - encapsulates company state and business logic
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company.CompanyState">
+<summary>
+ Internal state of company aggregate
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company.CorporateSealsState">
+<summary>
+ Collection of corporate seals
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company.CompanyStatus">
+<summary>
+ Company operational status
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.formatCompanyName(CompanyAsCode.SharedKernel.Japanese.BilingualName,CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Format company name with entity type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.getFiscalYearForDate(CompanyAsCode.SharedKernel.Temporal.FiscalYearEnd,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Get fiscal year for date
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.meetsCapitalRecommendation(CompanyAsCode.SharedKernel.Japanese.EntityType,System.Decimal)">
+<summary>
+ Check if company meets capital recommendation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.calculateDividendReserveContribution(System.Decimal)">
+<summary>
+ Calculate dividend reserve contribution
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.calculateRequiredLegalReserve(System.Decimal)">
+<summary>
+ Calculate required legal reserve
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.calculateRegistrationFee(CompanyAsCode.SharedKernel.Japanese.EntityType,System.Decimal)">
+<summary>
+ Calculate registration fee
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.allowsSimplifiedGovernance(CompanyAsCode.SharedKernel.Japanese.EntityType)">
+<summary>
+ Check if entity type allows simplified governance
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.Company.CompanyLogic.validateCorporateNumber(System.String)">
+<summary>
+ Validate corporate number
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Company.CompanyLogic.dividendReserveContribution">
+<summary>
+ Required contribution to legal reserve per dividend
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Company.CompanyLogic.legalReserveRatio">
+<summary>
+ Legal reserve requirement ratio (25% of capital)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Company.CompanyLogic.minimumNetAssetsForDividend">
+<summary>
+ Minimum net assets for dividend distribution
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Company.CompanyLogic.recommendedMinimumGK">
+<summary>
+ Minimum practical capital for G.K.
+</summary>
+</member>
+<member name="P:CompanyAsCode.Legal.Company.CompanyLogic.recommendedMinimumKK">
+<summary>
+ Minimum practical capital for K.K. (for credibility)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company.CompanyLogic">
+<summary>
+ Pure business logic functions for company operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.Company">
+<summary>
+ Company aggregate - the core aggregate root for legal entity
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.CompanyFactory.IncorporationBuilder">
+<summary>
+ Builder for creating incorporation commands
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.CompanyFactory.Incorporate(CompanyAsCode.Legal.CompanyFactory.IncorporateCompanyCommand)">
+<summary>
+ Incorporate a new company
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.CompanyFactory.CompanyFactory">
+<summary>
+ Factory for creating new Company aggregates
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.CompanyFactory.IncorporateCompanyCommand">
+<summary>
+ Command to incorporate a new company
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.incorporate">
+<summary>
+ Start building an incorporation command
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.QuickIncorporate.withDecemberFiscalYear(System.String,System.String,CompanyAsCode.SharedKernel.Japanese.EntityType,System.Decimal,CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Create a company with December fiscal year end
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.QuickIncorporate.withBilingualName(System.String,System.String,System.String,CompanyAsCode.SharedKernel.Japanese.EntityType,System.Decimal,CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Create a company with bilingual name
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.QuickIncorporate.godoKaisha(System.String,System.String,System.Decimal,CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Create a Godo Kaisha (G.K.) with standard settings
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.QuickIncorporate.kabushikiKaisha(System.String,System.String,System.Decimal,CompanyAsCode.SharedKernel.Contact.Address)">
+<summary>
+ Create a Kabushiki Kaisha (K.K.) with standard settings
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.CompanyFactory.QuickIncorporate">
+<summary>
+ Quick incorporation functions for common scenarios
+</summary>
+</member>
+<member name="M:CompanyAsCode.Legal.CompanyFactory.IncorporateCompanyCommandModule.validate(CompanyAsCode.Legal.CompanyFactory.IncorporateCompanyCommand)">
+<summary>
+ Validate incorporation command
+</summary>
+</member>
+<member name="T:CompanyAsCode.Legal.CompanyFactory">
+<summary>
+ Factory for creating Company aggregates
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Operations</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Operations.Placeholder">
+<summary>
+ Placeholder for Operations context - to be implemented
+</summary>
+</member>
+</members>
+</doc>

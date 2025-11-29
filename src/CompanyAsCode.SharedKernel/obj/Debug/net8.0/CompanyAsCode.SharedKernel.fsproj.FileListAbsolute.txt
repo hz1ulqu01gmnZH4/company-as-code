@@ -1,0 +1,13 @@
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/bin/Debug/net8.0/CompanyAsCode.SharedKernel.deps.json
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/bin/Debug/net8.0/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/bin/Debug/net8.0/CompanyAsCode.SharedKernel.pdb
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/bin/Debug/net8.0/CompanyAsCode.SharedKernel.xml
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.fsproj.AssemblyReference.cache
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.AssemblyInfoInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.AssemblyInfo.fs
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.fsproj.CoreCompileInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/refint/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.xml
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/CompanyAsCode.SharedKernel.pdb
+/home/ak/company-as-code/src/CompanyAsCode.SharedKernel/obj/Debug/net8.0/ref/CompanyAsCode.SharedKernel.dll

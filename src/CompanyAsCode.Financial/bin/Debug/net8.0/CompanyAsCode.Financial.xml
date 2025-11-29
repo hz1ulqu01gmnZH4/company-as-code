@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Financial</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Financial.Placeholder">
+<summary>
+ Placeholder for Financial context - to be implemented
+</summary>
+</member>
+</members>
+</doc>

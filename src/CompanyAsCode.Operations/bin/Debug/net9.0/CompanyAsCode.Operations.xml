@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CompanyAsCode.Operations</name></assembly>
+<members>
+<member name="T:CompanyAsCode.Operations.Errors.ProductServiceError">
+<summary>
+ Errors related to product/service operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Errors.BusinessPartnerError">
+<summary>
+ Errors related to business partner operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Errors.ContractError">
+<summary>
+ Errors related to contract operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Errors.ProjectError">
+<summary>
+ Errors related to project operations
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Errors">
+<summary>
+ Domain errors for Operations context
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.OperationsEvent">
+<summary>
+ All operations events
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.PriceChangedEvent">
+<summary>
+ Price changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProductCreatedEvent">
+<summary>
+ Product created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProductStatus">
+<summary>
+ Product status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProductCategory">
+<summary>
+ Product category
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.BusinessPartnerStatusChangedEvent">
+<summary>
+ Business partner status changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.BusinessPartnerCreatedEvent">
+<summary>
+ Business partner created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.BusinessPartnerStatus">
+<summary>
+ Business partner status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.BusinessPartnerType">
+<summary>
+ Business partner type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ContractTerminatedEvent">
+<summary>
+ Contract terminated event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ContractSignedEvent">
+<summary>
+ Contract signed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ContractCreatedEvent">
+<summary>
+ Contract created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ContractStatus">
+<summary>
+ Contract status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ContractType">
+<summary>
+ Contract type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProjectCompletedEvent">
+<summary>
+ Project completed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProjectStatusChangedEvent">
+<summary>
+ Project status changed event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProjectCreatedEvent">
+<summary>
+ Project created event
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProjectType">
+<summary>
+ Project type
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.ProjectStatus">
+<summary>
+ Project status
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events.OperationsEventMeta">
+<summary>
+ Operations event metadata
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Events">
+<summary>
+ Domain events for Operations context
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.UpdateContactInfo(Microsoft.FSharp.Core.FSharpOption{CompanyAsCode.SharedKernel.Contact.Address},Microsoft.FSharp.Core.FSharpOption{CompanyAsCode.SharedKernel.Contact.PhoneNumber},Microsoft.FSharp.Core.FSharpOption{CompanyAsCode.SharedKernel.Contact.Email})">
+<summary>
+ Update contact information
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.Suspend(System.String)">
+<summary>
+ Suspend the partner
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.SetTaxRegistrationNumber(System.String)">
+<summary>
+ Set tax registration number (インボイス登録番号)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.SetPaymentTerms(CompanyAsCode.Operations.BusinessPartner.PaymentTerms)">
+<summary>
+ Set payment terms
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.SetCreditLimit(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Set credit limit
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.SetBankAccount(System.String,System.String,System.String,System.String)">
+<summary>
+ Set bank account information
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.RecordTransaction(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Record a transaction date
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.Reactivate">
+<summary>
+ Reactivate the partner
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.FromState(CompanyAsCode.Operations.BusinessPartner.BusinessPartnerState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.Deactivate(System.String)">
+<summary>
+ Deactivate the partner
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.CreateVendor(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String)">
+<summary>
+ Create a vendor
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartner.CreateCustomer(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String)">
+<summary>
+ Create a customer
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.BusinessPartner.BusinessPartner">
+<summary>
+ Business partner aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.BusinessPartner.BusinessPartnerState">
+<summary>
+ Business partner state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.BusinessPartner.PaymentTerms">
+<summary>
+ Standard payment terms in Japan
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.BusinessPartner.PartnerCode">
+<summary>
+ Partner code - unique identifier for business partners
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartnerLogic.codePrefix(CompanyAsCode.Operations.Events.BusinessPartnerType)">
+<summary>
+ Get partner code prefix based on type
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.BusinessPartnerLogic.exceedsCreditLimit(CompanyAsCode.Operations.BusinessPartner.BusinessPartner,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Check if transaction amount exceeds credit limit
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.BusinessPartner.PaymentTermsModule.calculateDueDate(CompanyAsCode.Operations.BusinessPartner.PaymentTerms,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Calculate due date from invoice date
+</summary>
+</member>
+<member name="P:CompanyAsCode.Operations.BusinessPartner.PaymentTermsModule.monthEnd">
+<summary>
+ End of month closing, end of next month payment (末締め翌月末払い)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Operations.BusinessPartner.PaymentTermsModule.standard20_10">
+<summary>
+ 20th closing, 10th of next month payment (20日締め翌月10日払い)
+</summary>
+</member>
+<member name="P:CompanyAsCode.Operations.BusinessPartner.PaymentTermsModule.defaultTerms">
+<summary>
+ Default: End of month closing, payment on 20th of next month
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.BusinessPartner">
+<summary>
+ Business Partner (Customer/Vendor) aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.Start">
+<summary>
+ Start the project
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.Resume">
+<summary>
+ Resume project from hold
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.RecordLaborCost(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Record labor cost
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.RecordExpense(CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Record expense
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.PutOnHold(System.String)">
+<summary>
+ Put project on hold
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.LinkToCustomer(CompanyAsCode.SharedKernel.Identity.BusinessPartnerId)">
+<summary>
+ Link to customer
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.LinkToContract(CompanyAsCode.SharedKernel.Identity.ContractId)">
+<summary>
+ Link to contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.FromState(CompanyAsCode.Operations.Project.ProjectState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,CompanyAsCode.Operations.Events.ProjectType,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Create a new project
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.CompleteMilestone(System.String,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Complete a milestone
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.Complete(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Complete the project
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.Cancel(System.String)">
+<summary>
+ Cancel the project
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.AssignProjectManager(System.String)">
+<summary>
+ Assign project manager
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.AddTeamMember(System.String)">
+<summary>
+ Add team member
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.Project.AddMilestone(System.String,CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Add a milestone
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project.Project">
+<summary>
+ Project aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project.ProjectState">
+<summary>
+ Project state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project.ProjectBudget">
+<summary>
+ Project budget tracking
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project.Milestone">
+<summary>
+ Project milestone
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project.ProjectCode">
+<summary>
+ Project code - unique identifier for projects
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.ProjectLogic.costVariance(CompanyAsCode.Operations.Project.Project)">
+<summary>
+ Calculate cost variance (positive = under budget)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.ProjectLogic.scheduleVariance(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.Operations.Project.Project)">
+<summary>
+ Calculate schedule variance (positive = ahead, negative = behind)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Project.ProjectLogic.overdueMilestones(CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.Operations.Project.Project)">
+<summary>
+ Get overdue milestones
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Project">
+<summary>
+ Project aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Terminate(CompanyAsCode.SharedKernel.Temporal.Date,System.String,System.String)">
+<summary>
+ Terminate the contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.SubmitForReview">
+<summary>
+ Submit for review
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.StartNegotiation">
+<summary>
+ Start negotiation
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Sign(CompanyAsCode.SharedKernel.Temporal.Date,System.String,System.String)">
+<summary>
+ Sign the contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Renew(CompanyAsCode.SharedKernel.Temporal.Date)">
+<summary>
+ Renew the contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.MarkExpired">
+<summary>
+ Mark as expired
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.LinkToProject(CompanyAsCode.SharedKernel.Identity.ProjectId)">
+<summary>
+ Link to project
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.FromState(CompanyAsCode.Operations.Contract.ContractState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,CompanyAsCode.Operations.Events.ContractType,System.String,CompanyAsCode.SharedKernel.Identity.BusinessPartnerId,System.String,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Temporal.Date,CompanyAsCode.SharedKernel.Financial.Money)">
+<summary>
+ Create a new contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Amend(System.String,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Operations.Contract.ClauseType},CompanyAsCode.SharedKernel.Temporal.Date,System.String,System.String)">
+<summary>
+ Amend the contract
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.AddClause(CompanyAsCode.Operations.Contract.ContractClause)">
+<summary>
+ Add a clause
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.Contract.Activate">
+<summary>
+ Activate the contract
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.Contract">
+<summary>
+ Contract aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ContractState">
+<summary>
+ Contract state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ContractAmendment">
+<summary>
+ Contract amendment record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ContractClause">
+<summary>
+ Contract clause
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ClauseType">
+<summary>
+ Standard contract clause types
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ContractTerm">
+<summary>
+ Contract term/duration
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract.ContractNumber">
+<summary>
+ Contract number - unique identifier for contracts
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.ContractLogic.standardClause(CompanyAsCode.Operations.Contract.ClauseType)">
+<summary>
+ Get standard clause template
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.ContractLogic.totalValue(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Operations.Contract.Contract})">
+<summary>
+ Calculate total contract value
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.ContractLogic.expiringWithin(System.Int32,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Operations.Contract.Contract})">
+<summary>
+ Get contracts expiring within days
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.Contract.ContractNumberModule.generate(System.String,System.Int32,System.Int32)">
+<summary>
+ Generate contract number with prefix and date
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.Contract">
+<summary>
+ Contract aggregate
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.UpdateDescription(System.String)">
+<summary>
+ Update description
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.SetServiceDuration(System.Int32)">
+<summary>
+ Set service duration (for services)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.SetSKU(System.String)">
+<summary>
+ Set SKU
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.SetRecurringInterval(System.String)">
+<summary>
+ Set recurring interval (for subscriptions)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.MarkEndOfLife">
+<summary>
+ Mark as end of life
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.Launch">
+<summary>
+ Launch the product (make active)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.FromState(CompanyAsCode.Operations.ProductService.ProductState)">
+<summary>
+ Reconstitute from state
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.DisplayPrice(System.Boolean)">
+<summary>
+ Get display price (with or without tax)
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.Discontinue">
+<summary>
+ Discontinue the product
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.CreateService(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String,CompanyAsCode.SharedKernel.Financial.Money,System.Decimal)">
+<summary>
+ Create a service
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.Create(CompanyAsCode.SharedKernel.Identity.CompanyId,System.String,System.String,System.String,CompanyAsCode.Operations.Events.ProductCategory,CompanyAsCode.SharedKernel.Financial.Money,System.Decimal)">
+<summary>
+ Create a new product
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.Product.ChangePrice(CompanyAsCode.Operations.ProductService.Price,CompanyAsCode.SharedKernel.Temporal.Date,Microsoft.FSharp.Core.FSharpOption{System.String},System.String)">
+<summary>
+ Change the price
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService.Product">
+<summary>
+ Product/Service aggregate root
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService.ProductState">
+<summary>
+ Product/Service state (immutable)
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService.PriceHistory">
+<summary>
+ Price change record
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService.Price">
+<summary>
+ Price with tax handling
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService.ProductCode">
+<summary>
+ Product/Service code
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.ProductLogic.priceHistory(CompanyAsCode.Operations.ProductService.Product)">
+<summary>
+ Get price history for audit
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.ProductLogic.byCategory(CompanyAsCode.Operations.Events.ProductCategory,Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Operations.ProductService.Product})">
+<summary>
+ Filter by category
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.ProductLogic.activeProducts(Microsoft.FSharp.Collections.FSharpList{CompanyAsCode.Operations.ProductService.Product})">
+<summary>
+ Get active products
+</summary>
+</member>
+<member name="M:CompanyAsCode.Operations.ProductService.ProductLogic.calculateTotal(System.Decimal,CompanyAsCode.Operations.ProductService.Product)">
+<summary>
+ Calculate price for quantity
+</summary>
+</member>
+<member name="T:CompanyAsCode.Operations.ProductService">
+<summary>
+ Product/Service aggregate
+</summary>
+</member>
+</members>
+</doc>

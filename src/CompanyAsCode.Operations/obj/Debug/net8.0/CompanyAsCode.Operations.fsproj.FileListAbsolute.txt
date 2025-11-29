@@ -1,0 +1,17 @@
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.Operations.deps.json
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.Operations.dll
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.Operations.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.Operations.xml
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.SharedKernel.dll
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.SharedKernel.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Operations/bin/Debug/net8.0/CompanyAsCode.SharedKernel.xml
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.fsproj.AssemblyReference.cache
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.AssemblyInfoInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.AssemblyInfo.fs
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.fsproj.CoreCompileInputs.cache
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyA.79A16BC4.Up2Date
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.dll
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/refint/CompanyAsCode.Operations.dll
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.xml
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/CompanyAsCode.Operations.pdb
+/home/ak/company-as-code/src/CompanyAsCode.Operations/obj/Debug/net8.0/ref/CompanyAsCode.Operations.dll
